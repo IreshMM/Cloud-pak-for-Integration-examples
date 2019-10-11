@@ -18,11 +18,11 @@
 # oc label node <master node name/infrastructure node name> node-role.kubernetes.io/compute=true
 cluster_nodes:
   master:
-    - ocp-acn-ab2f29fb9d-master-0.ocpacn-openshift.cloud
+    - ocp-ab2f29fb9d-master-0.ocpacn-openshift.cloud
   proxy:
-    - ocp-acn-ab2f29fb9d-app-0.ocpacn-openshift.cloud
+    - ocp-ab2f29fb9d-app-0.ocpacn-openshift.cloud
   management:
-    - ocp-acn-ab2f29fb9d-infra-0.ocpacn-openshift.cloud
+    - ocp-ab2f29fb9d-infra-0.ocpacn-openshift.cloud
 
 storage_class: glusterfs-storage
 
@@ -30,7 +30,7 @@ openshift:
   # These values are used by the installer to communicate with OpenShift and install components.
   # They should match the hostname and port used to connect to the OpenShift console.
   console:
-    host: ocp-acn-ab2f29fb9d-master-0.ocpacn-openshift.cloud
+    host: ocp-ab2f29fb9d-master-0.ocpacn-openshift.cloud
     port: 8443
 
   # These values define the hostname to use for the Cloud Pak foundation console and proxy. These
@@ -38,10 +38,10 @@ openshift:
   # infrastructure node, or the load balancer that manages traffic for multiple infrastructure
   # nodes.
   router:
-    cluster_host: icp-console.apps.158.176.93.76.xip.io
+    cluster_host: icp-console.apps.158.16.93.76.xip.io
     # &proxy is a YAML anchor that allows us to refer to this value later when configuring
     # the IBM Cloud Pak for Integration Platform Navigator
-    proxy_host: &proxy icp-proxy.apps.158.176.93.76.xip.io
+    proxy_host: &proxy icp-proxy.apps.158.16.93.76.xip.io
 
 default_admin_password: admin
 
